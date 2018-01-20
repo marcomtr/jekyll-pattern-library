@@ -15,34 +15,6 @@
 }
 
 /**
-* Base faux box link
-*/
-
-.u-faux-box-link {
-	position: relative;
-}
-
-// Overlay styling
-.u-faux-box-link__overlay {
-	position: absolute;
-	opacity: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	overflow: hidden;
-	text-indent: 200%;
-	white-space: nowrap;
-	background: transparent;
-	z-index: $zindex-faux-link;
-}
-
-// The link that can be clicked on.
-.u-faux-box-link__promote {
-	z-index: unquote($zindex-faux-link + 1);
-}
-
-/**
 * Height
 */
 
