@@ -1,0 +1,136 @@
+// Define defaults for each variable.
+
+/**
+* Colour
+*/
+
+// grays
+$gray-100: #F5F5F5;
+$gray-200: #EEEEEE;
+$gray-300: #E0E0E0;
+$gray-400: #BDBDBD;
+$gray-500: #9E9E9E;
+$gray-600: #757575;
+$gray-700: #616161;
+$gray-800: #424242;
+$gray-900: #212121;
+
+// brand
+$primary: #0057ff;
+$primary-light: lighten($primary, 20%);
+$primary-dark: darken($primary, 10%);
+
+
+// general
+$blue: #0a71d4;
+$indigo: #3f51b5;
+$red: #dc3545;
+$yellow: #ffc107;
+$green: #28a745;
+$cyan: #17a2b8;
+$purple: #9c27b0;
+$pink: #e91e63;
+$orange: #fd7e14;
+$teal: #20c997;
+$cyan: #17a2b8;
+$brown: #795548;
+
+// state
+$link: $blue;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+
+// custom
+$premium: $orange;
+
+
+/**
+* Logo
+*/
+
+$logo-color: $primary;
+
+/**
+* Font
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Carter+One');
+
+
+$base-font-family: "Roboto", Helvetica, Arial, sans-serif;
+$base-line-height: 1.5;
+$base-font-size: 16px;
+$secondary-font-family: "Carter One", Helvetica, Arial, sans-serif;
+
+$font-size-xxlarge: 5em;
+$font-size-xlarge: 3em;
+$font-size-large: 2em;
+$font-size-medium: 1.25em;
+$font-size-default: 1em;
+$font-size-small: 0.75em;
+
+$text-color: black;
+
+/**
+* Width of Content Area
+*/
+$content-width: 1070px;
+
+/**
+* Border radius
+*/
+
+$border-radius-base: 4px;
+$border-radius-large: 6px;
+$border-radius-small: 3px;
+
+/**
+* Spacing Unit
+*/
+
+$base-spacing:4px;
+$spacing-xxsmall: $base-spacing/2; // 2px
+$spacing-xsmall: $base-spacing; // 4px
+$spacing-small: $base-spacing*2; // 8px
+$spacing-medium: $base-spacing*3; // 12px
+$spacing-large: $base-spacing*4; // 16px
+$spacing-xlarge: $base-spacing*5; // 20px
+$spacing-xxlarge: $base-spacing*6; // 24px
+$spacing-xxxlarge: $base-spacing*10; // 40px
+
+/**
+* Z-index master list
+*/
+
+$zindex-popup-message: 1080;
+$zindex-modal: 1060;
+$zindex-floating-action: 1040;
+$zindex-user-popover: 1020;
+$zindex-custom-dropdown: 1000;
+$zindex-faux-link: 980;
+
+/**
+* SVG Sizes
+*/
+$svg-small:18;
+$svg-medium:24;
+$svg-large:36;
+
+/**
+* Media Queries
+* Use media queries like this:
+* @include media-query('on-laptop') {}
+*/
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'on-mobile': 375px,
+  'on-tablet': 768px,
+  'on-laptop': 1024px,
+  'on-desk': 1366px,
+) !default;

@@ -2,6 +2,26 @@
 ---
 @charset "utf-8";
 
-@import 'vendor/normalize';
+// Import partials.
+@import
+	"base/mixins",
+	"base/variables",
+	"base/config",
 
-@import 'base/root';
+	"external/normalize",
+	"external/bootstrap-grid",
+
+	"components/avatar",
+	"components/brand-name",
+	"components/brand",
+	"components/button",
+	"components/facepile",
+	"components/form",
+	"components/label",
+	"components/loader",
+	"components/popup-message",
+	"components/progress",
+	"components/svg-element",
+	"components/tabs",
+
+	"utility/helpers";

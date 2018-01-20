@@ -1,0 +1,10 @@
+.brand-name {
+	font-family: $secondary-font-family;
+	@include font-size-medium;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.brand-name__word-1 {
+	// font-weight: bold;
+}

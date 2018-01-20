@@ -1,0 +1,24 @@
+.svg-element {
+	display: block;
+}
+
+.svg-element--inline {
+	display: inline-block;
+}
+
+.svg-element--success {
+	fill: $green;
+}
+
+.svg-element--primary {
+	fill: $primary;
+}
+
+.svg-element--premium {
+	fill: $orange;
+}
+
+
+.svg-element--disabled {
+	fill: $gray-300;
+}

@@ -1,0 +1,293 @@
+// -----------------------------------------------------------------------------
+// Base button
+// -----------------------------------------------------------------------------
+
+// Reset Button Style
+
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+	background: none;
+	border: 0;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	overflow: visible;
+	padding: 0;
+	cursor: pointer;
+	-webkit-appearance: button; /* for input */
+	-webkit-user-select: none; /* for button */
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+.btn {
+	display: inline-block;
+	box-sizing: border-box;
+	cursor: pointer;
+	overflow: hidden;
+	text-align: center;
+	background-color: transparent;
+	text-decoration: none;
+	white-space: nowrap;
+	vertical-align: middle;
+	border: 1px solid;
+	border-color: transparent;
+	border-radius: 4px;
+	line-height: 24px;
+
+	.svg-element {
+		margin: auto;
+	}
+
+	@include on-event {
+		text-decoration: none;
+		outline: none;
+	}
+
+}
+
+
+// -----------------------------------------------------------------------------
+// Button Types
+// -----------------------------------------------------------------------------
+
+
+// Icon only buttons
+
+.btn--icon {
+	.svg-element {
+		fill: $gray-700;
+		height: 100%;
+	}
+	@include on-event {
+		.svg-element {
+			fill: $primary;
+		}
+	}
+}
+
+// Icon and text buttons
+
+.btn--icon-and-text {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	.btn__icon {
+		display: flex;
+	}
+}
+
+// Text margin
+
+.btn__text {
+	margin: 0 $spacing-xsmall;
+}
+
+
+// -----------------------------------------------------------------------------
+// Themes
+// -----------------------------------------------------------------------------
+
+.btn--primary {
+	background-color: $primary;
+	color: white;
+
+	.svg-element {
+		fill: white;
+	}
+
+	@include on-event {
+		color: white;
+		background-color: lighten($primary, 5%);
+
+		.svg-element {
+			fill: white;
+		}
+	}
+}
+
+.btn--link {
+	text-decoration: underline;
+	color: $primary;
+
+	.svg-element {
+		fill: $primary;
+	}
+
+	@include on-event {
+		text-decoration: underline;
+		background-color: $gray-100;
+	}
+}
+
+.btn--link-white {
+	color: white;
+	text-decoration: underline;
+
+	.svg-element {
+		fill: white;
+	}
+
+	@include on-event {
+		text-decoration: underline;
+		background-color: $gray-800;
+		color: white;
+
+		.svg-element {
+			fill: white;
+		}
+	}
+}
+
+.btn--outline {
+	color: white;
+	font-weight: bold;
+	border-color: white;
+
+	.svg-element {
+		fill: white;
+	}
+
+	@include on-event {
+		color: white;
+		border-color: white;
+
+		.svg-element {
+			fill: white;
+		}
+	}
+}
+
+.btn--outline-light {
+	background-color: white;
+	color: $gray-900;
+	font-weight: bold;
+	border-color: $gray-300;
+	transition: background-color 0.25s;
+
+	.svg-element {
+		fill: $gray-900;
+	}
+
+	@include on-event {
+		background-color: $gray-100;
+	}
+}
+
+
+.btn--disabled {
+	color: $gray-300;
+	border-color: $gray-300;
+	cursor: default;
+	@include on-event {
+		color: $gray-300;
+	}
+}
+
+.btn--premium {
+	background-color: $orange;
+	color: white;
+	font-weight: bold;
+
+	@include on-event {
+		color: white;
+		background-color: lighten($orange, 5%);
+	}
+}
+
+.btn--outline-premium {
+	color: $premium;
+	font-weight: bold;
+	border-color: $premium;
+
+	@include on-event {
+		color: lighten($premium, 5%);
+		border-color: lighten($premium, 5%);
+	}
+}
+
+// -----------------------------------------------------------------------------
+// Sizes
+// -----------------------------------------------------------------------------
+
+.btn--xsmall {
+	@include font-size-xsmall;
+	padding: 0 $spacing-small;
+	height: 30px;
+	line-height: 28px;
+}
+
+.btn--small {
+	@include font-size-xsmall;
+	padding: 0 $spacing-small;
+	height: 34px;
+	line-height: 32px;
+}
+
+.btn--medium {
+	@include font-size-small;
+	padding: 0 $spacing-medium;
+	height: 38px;
+	line-height: 36px;
+}
+
+
+// Circular buttons
+
+.btn--round {
+	border-radius: 50%;
+	object-fit: cover;
+	@include font-size-xsmall;
+
+	&-xsmall {
+		width: 30px;
+		height: 30px;
+	}
+
+	&-small {
+		width: 34px;
+		height: 34px;
+	}
+
+	&-medium {
+		width: 38px;
+		height: 38px;
+	}
+}
+
+
+// -----------------------------------------------------------------------------
+// Alignment
+// -----------------------------------------------------------------------------
+
+.btn--right {
+	float: right;
+}
+
+// -----------------------------------------------------------------------------
+// Display
+// -----------------------------------------------------------------------------
+
+.btn--block {
+	width: 100%;
+}

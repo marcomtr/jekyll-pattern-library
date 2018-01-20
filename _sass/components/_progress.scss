@@ -1,0 +1,33 @@
+.progress__header {
+	display: flex;
+	justify-content: space-between;
+	@include font-size-small;
+}
+
+.progress__title {
+	font-weight: bold;
+	margin-right: $spacing-small;
+}
+
+.progress__bar {
+	height: 8px;
+	background-color: $gray-200;
+	overflow: hidden;
+}
+
+.progress__bar--for-dark-bg {
+	background-color: transparent;
+
+	.progress--is-active & {
+		background-color: rgba(0,0,0, 0.25);
+	}
+
+	.progress__indicator {
+		background: linear-gradient(to right, transparent, #fff);
+	}
+
+}
+
+.progress__indicator {
+	height: 8px;
+}

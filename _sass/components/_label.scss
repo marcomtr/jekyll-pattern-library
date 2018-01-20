@@ -1,0 +1,36 @@
+.label {
+	display: inline-flex;
+	font-weight: bold;
+	text-align: center;
+	white-space: nowrap;
+	text-transform: uppercase;
+	padding: 0 $spacing-xsmall;
+	justify-content: center;
+	align-items: center;
+	@include font-size-xsmall;
+	height: 24px;
+	border-radius: 4px;
+}
+
+.label--block {
+	width: 100%;
+}
+
+.label__text {
+	margin: 0 $spacing-small;
+	text-align: center;
+	line-height: 1;
+}
+
+.label--has-icon {
+	.label__text {
+		margin: 0 $spacing-xsmall;
+	}
+}
+
+.label--round {
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	padding: 0;
+}

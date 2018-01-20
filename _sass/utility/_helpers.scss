@@ -1,0 +1,590 @@
+/**
+* Screen Reader Only
+*/
+.u-sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}
+
+/**
+* Base faux box link
+*/
+
+.u-faux-box-link {
+	position: relative;
+}
+
+// Overlay styling
+.u-faux-box-link__overlay {
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	text-indent: 200%;
+	white-space: nowrap;
+	background: transparent;
+	z-index: $zindex-faux-link;
+}
+
+// The link that can be clicked on.
+.u-faux-box-link__promote {
+	z-index: unquote($zindex-faux-link + 1);
+}
+
+/**
+* Height
+*/
+
+.u-height-100vh {
+	height: 100vh;
+}
+
+.u-height-100 {
+	height: 100%;
+}
+
+
+/**
+* Scrollbars
+*/
+
+.u-freeze-vp {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+/**
+* Truncate text
+*/
+
+.u-truncate-text {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/**
+* Visibility
+*/
+
+.u-hide {
+	display: none;
+}
+
+.u-visibility-hidden {
+	visibility: hidden;
+}
+
+
+/**
+* Background Colour
+*/
+
+.u-bg-white {
+	background-color: white;
+}
+
+.u-bg-black {
+	background-color: #000;
+}
+
+.u-bg-gray-900 {
+	background-color: $gray-900;
+}
+
+.u-bg-gray-800 {
+	background-color: $gray-800;
+}
+
+.u-bg-gray-700 {
+	background-color: $gray-700;
+}
+
+.u-bg-gray-600 {
+	background-color: $gray-600;
+}
+
+.u-bg-gray-500 {
+	background-color: $gray-500;
+}
+
+.u-bg-gray-400 {
+	background-color: $gray-400;
+}
+
+.u-bg-gray-300 {
+	background-color: $gray-300;
+}
+
+.u-bg-gray-200 {
+	background-color: $gray-200;
+}
+
+.u-bg-gray-100 {
+	background-color: $gray-100;
+}
+
+.u-bg-primary {
+	background-color: $primary;
+}
+
+.u-bg-primary-light {
+	background-color: $primary-light;
+}
+
+.u-bg-primary-dark {
+	background-color: $primary-dark;
+}
+
+.u-bg-premium {
+	background-color: $premium;
+}
+
+.u-bg-pink {
+	background-color: $pink;
+}
+
+.u-bg-purple {
+	background-color: $purple;
+}
+
+.u-bg-indigo {
+	background-color: $indigo;
+}
+
+.u-bg-teal {
+	background-color: $teal;
+}
+
+.u-bg-brown {
+	background-color: $brown;
+}
+
+/**
+* Background Image
+*/
+
+.u-bg-size-cover {
+	background-size: cover;
+}
+
+.u-bg-no-repeat {
+	background-repeat: no-repeat;
+}
+
+.u-bg-center {
+	background-position: center;
+}
+
+
+/**
+* Fill Colour
+*/
+
+.u-fill-white {
+	fill: white;
+}
+
+.u-fill-black {
+	fill: #000;
+}
+
+.u-fill-gray-900 {
+	fill: $gray-900;
+}
+
+.u-fill-gray-800 {
+	fill: $gray-800;
+}
+
+.u-fill-gray-700 {
+	fill: $gray-700;
+}
+
+.u-fill-gray-600 {
+	fill: $gray-600;
+}
+
+.u-fill-gray-500 {
+	fill: $gray-500;
+}
+
+.u-fill-gray-400 {
+	fill: $gray-400;
+}
+
+.u-fill-gray-300 {
+	fill: $gray-300;
+}
+
+.u-fill-gray-200 {
+	fill: $gray-200;
+}
+
+.u-fill-gray-100 {
+	fill: $gray-100;
+}
+
+.u-fill-premium {
+	fill: $premium;
+}
+
+.u-fill-primary {
+	fill: $primary;
+}
+
+/**
+* Text Colour
+*/
+.u-t-white {
+	color: white !important;
+}
+
+.u-t-primary {
+	color: $primary !important;
+}
+
+.u-t-primary-light {
+	color: $primary-light !important;
+}
+
+.u-t-primary-dark {
+	color: $primary-dark !important;
+}
+
+.u-t-gray-900 {
+	color: $gray-900 !important;
+}
+
+.u-t-gray-800 {
+	color: $gray-800 !important;
+}
+
+.u-t-gray-700 {
+	color: $gray-700 !important;
+}
+
+.u-t-gray-600 {
+	color: $gray-600 !important;
+}
+
+.u-t-gray-500 {
+	color: $gray-500 !important;
+}
+
+.u-t-gray-400 {
+	color: $gray-400 !important;
+}
+
+.u-t-black {
+	color: black !important;
+}
+
+.u-t-success {
+	color: $success !important;
+}
+
+.u-t-danger {
+	color: $danger !important;
+}
+
+.u-t-info {
+	color: $info !important;
+}
+
+.u-t-premium {
+	color: $premium !important;
+}
+
+/**
+* Text Weight
+*/
+
+.u-t-normal {
+	font-weight: 400;
+}
+
+.u-t-bold {
+	font-weight: 700;
+}
+
+.u-t-xbold {
+	font-weight: 900;
+}
+
+/**
+* Text decoration
+*/
+
+.u-t-underline {
+	text-decoration: underline;
+}
+
+/**
+* Text Transform
+*/
+
+.u-t-uppercase {
+	text-transform: uppercase;
+}
+
+/**
+* Text Letter Spacing
+*/
+
+.u-t-letter-spacing-2px {
+	letter-spacing: 2px;
+}
+
+
+/**
+* Text Alignment
+*/
+.u-t-center {
+	text-align: center;
+}
+.u-t-left {
+	text-align: left;
+}
+.u-t-right {
+	text-align: right;
+}
+
+/**
+* Text Size
+*/
+
+.u-t-xsmall {
+	@include font-size-xsmall;
+}
+
+.u-t-small {
+	@include font-size-small;
+}
+
+.u-t-medium {
+	@include font-size-medium;
+}
+
+.u-t-large {
+	@include font-size-large;
+}
+
+.u-t-xlarge {
+	@include font-size-xlarge;
+}
+
+.u-t-xxlarge {
+	@include font-size-xxlarge;
+}
+
+
+/**
+* Layout
+*/
+
+.u-flex {
+	display: flex;
+	&--tablet-up {
+		@include media-query('on-tablet') {
+			display: flex;
+		}
+	}
+}
+
+.u-flex-center {
+	justify-content: center;
+	&--tablet-up {
+		@include media-query('on-tablet') {
+			justify-content: center;
+		}
+
+	}
+}
+
+.u-flex-between {
+	justify-content: space-between;
+	&--tablet-up {
+		@include media-query('on-tablet') {
+			justify-content: space-between;
+		}
+
+	}
+}
+
+.u-flex-items-center {
+	align-items: center;
+}
+
+.u-flex-align-self-center {
+	align-self: center;
+}
+
+/**
+* Borders
+*/
+
+// WIDTH
+
+.u-border {
+	border: 1px solid;
+}
+
+.u-border-bottom {
+	border-bottom: 1px solid;
+}
+
+.u-border-top {
+	border-top: 1px solid;
+}
+
+.u-border-left {
+	border-left: 1px solid;
+}
+
+.u-border-right {
+	border-right: 1px solid;
+}
+
+
+// left border width
+.u-border-left-3 {
+	border-left: 3px solid;
+}
+
+
+// colours
+
+.u-border-gray-300 {
+	border-color: $gray-300;
+}
+
+.u-border-success {
+	border-color: $success;
+}
+
+.u-border-danger {
+	border-color: $danger;
+}
+
+.u-border-info {
+	border-color: $info;
+}
+
+/**
+* Border radius
+*/
+
+.u-br-x2 {
+	border-radius: 2px;
+}
+
+.u-br-x3 {
+	border-radius: 3px;
+}
+
+.u-br-x4 {
+	border-radius: 4px;
+}
+
+.u-br-circle {
+	border-radius: 50%;
+}
+
+/**
+* Position
+*/
+
+.u-position-relative {
+	position: relative;
+}
+
+/**
+* Horizontal centering
+*/
+
+.u-margin-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.u-margin-l-auto {
+	margin-left: auto;
+}
+
+.u-margin-r-auto {
+	margin-right: auto;
+}
+
+/**
+* Spacing
+*/
+
+$abbrevs : (
+	u-margin: margin,
+	u-padding: padding
+);
+
+$sizes : (
+	xxsmall: $spacing-xxsmall,
+	xsmall: $spacing-xsmall,
+	small: $spacing-small,
+	medium: $spacing-medium,
+	large: $spacing-large,
+	xlarge: $spacing-xlarge,
+	xxlarge: $spacing-xxlarge
+);
+
+// generates utility classes in format:
+// margin-t-xsmall     (margin top xsmall)
+// padding-a-huge       (padding all  huge)
+
+@each $abbrevProp, $abbrev in $abbrevs {
+
+	@each $abbrevSize, $size in $sizes {
+
+		.#{$abbrevProp}-t-#{$abbrevSize} {
+			#{$abbrev}-top : $size !important;
+		}
+
+		.#{$abbrevProp}-b-#{$abbrevSize} {
+			#{$abbrev}-bottom : $size !important;
+		}
+
+		.#{$abbrevProp}-l-#{$abbrevSize} {
+			#{$abbrev}-left : $size !important;
+		}
+
+		.#{$abbrevProp}-r-#{$abbrevSize} {
+			#{$abbrev}-right : $size !important;
+		}
+
+		.#{$abbrevProp}-v-#{$abbrevSize} {
+			#{$abbrev}-top: $size !important;
+			#{$abbrev}-bottom: $size !important;
+		}
+
+		.#{$abbrevProp}-h-#{$abbrevSize} {
+			#{$abbrev}-left: $size !important;
+			#{$abbrev}-right: $size !important;
+		}
+
+		.#{$abbrevProp}-a-#{$abbrevSize} {
+			#{$abbrev}: $size !important;
+		}
+	}
+
+}
