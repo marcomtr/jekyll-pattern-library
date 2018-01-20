@@ -1,8 +1,8 @@
 - name: Form elements
   link: components/form-elements
 
-- name: Progress
-  link: components/progress
+- name: Progress bar
+  link: components/progress-bar
 
 - name: Loader
   link: components/loader
@@ -14,4 +14,4 @@
   link: components/facepile
 
 - name: Tabs
-  link: components/facepile
+  link: components/tabs

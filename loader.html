@@ -1,0 +1,30 @@
+---
+layout: default
+title: Loader
+permalink: /components/loader
+---
+
+<h1 class="u-margin-b-xxlarge u-t-bold">Loader</h1>
+
+<p class="u-padding-b-large u-t-gray-500">Loading animation to be used for short processes less than 4 seconds</p>
+
+<div class="row">
+	<div class="col-sm-6">
+		<div class="u-border u-border-gray-300 u-br-x3 u-padding-a-large">
+			<div class="loader"></div>
+		</div>
+	</div>
+</div>
+
+<div class="u-padding-t-medium">
+	<button class="btn btn--icon-and-text js-source-trigger u-t-small u-t-primary">
+		<span class="btn__icon">
+			<include href="/frontend/assets/svg/parts/svg-layout.html" with="content='code.svg', className='u-fill-primary' " />
+		</span>
+		<span class="btn__text">Source</span>
+	</button>
+	<div class="u-hide js-source">
+		<script type="text/plain" class="language-markup"><div class="loader"></div></script>
+	</div>
+</div>
+

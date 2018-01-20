@@ -5,13 +5,17 @@
 
   <body>
 
-    {% include header.html %}
+	<div class="pl">
 
-    {% include sidebar.html %}
+	    {% include sidebar.html %}
 
-	{{ content }}
+		<main class="pl__content">
+			{{ content }}
+		</main>
 
-    {% include scripts.html %}
+	    {% include scripts.html %}
+
+	</div>
 
   </body>
 

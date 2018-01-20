@@ -1,0 +1,117 @@
+---
+layout: default
+title: Form Elements
+permalink: /components/form-elements
+---
+
+<h1 class="u-margin-b-xxlarge u-t-bold">Form elements</h1>
+
+<div class="row u-margin-b-xxlarge">
+
+	<div class="col-12 u-margin-b-xxlarge">
+		
+		<form class="form">
+
+			<h2 class="u-margin-b-large u-t-gray-700 u-t-large">Labels</h2>
+
+			<p class="u-padding-b-large u-t-gray-500">Our standard input styling across the website. This is specifically for text, email, password, search etc. type inputs.</p>
+
+			<div class="form__group">
+				<label for="01" class="form__label">Form Label</label>
+				<input type="text" id="01" class="form__input" placeholder="Placeholder text"/>
+			</div>
+
+			<div>
+				<button class="btn btn--icon-and-text js-source-trigger u-t-small u-t-primary">
+					<span class="btn__icon">
+						<include href="/frontend/assets/svg/parts/svg-layout.html" with="content='code.svg', className='u-fill-primary' " />
+					</span>
+					<span class="btn__text">Source</span>
+				</button>
+				<div class="u-hide js-source">
+					<script type="text/plain" class="language-markup"><div class="form__group"><label for="01" class="form__label">Form Label</label><input type="text" id="01" class="form__input" placeholder="Placeholder text"/></div></script>
+				</div>
+			</div>
+
+			<div class="form__group">
+
+				<h2 class="u-margin-b-large u-margin-t-xxlarge u-t-gray-700 u-t-large">Checkboxes</h2>
+				
+				<p class="u-padding-b-large u-t-gray-500">Checkboxes are used in two subtly different ways: choosing from a selection and confirmation of action. The fieldset element should be added to group elements.</p>
+
+				<fieldset class="form__fieldset">
+					
+					<legend class="form__legend">Form Legend</legend>
+
+					<div class="u-flex u-flex-items-center">
+						
+						<div class="u-margin-r-large">
+							<input type="checkbox" name="check" id="check1">
+							<label for="check1" class="form__checkbox-label">Checkbox 1</label>
+						</div>
+						
+						<div>								
+							<input type="checkbox" name="check" id="check2">
+							<label for="check2" class="form__checkbox-label">Checkbox 2</label>
+						</div>
+						
+					</div>
+					
+			
+				</fieldset>
+
+			</div>
+
+			<div>
+				<button class="btn btn--icon-and-text js-source-trigger u-t-small u-t-primary">
+					<span class="btn__icon">
+						<include href="/frontend/assets/svg/parts/svg-layout.html" with="content='code.svg', className='u-fill-primary' " />
+					</span>
+					<span class="btn__text">Source</span>
+				</button>
+				<div class="u-hide js-source">
+					<script type="text/plain" class="language-markup"><div class="form__group"><fieldset class="form__fieldset"><legend class="form__legend">Form Legend</legend><div class="u-flex u-flex-items-center"><div class="u-margin-r-large"><input type="checkbox" name="check" id="check1"><label for="check1" class="form__checkbox-label">Checkbox 1</label></div><div><input type="checkbox" name="check" id="check2"><label for="check2" class="form__checkbox-label">Checkbox 2</label></div></div></fieldset></div></script>
+				</div>
+			</div>
+
+			<div class="form__group">
+				
+				<h2 class="u-margin-b-large u-margin-t-xxlarge u-t-gray-700 u-t-large">Radio buttons</h2>
+
+				<p class="u-padding-b-large u-t-gray-500">Radio buttons behave the same way as checkboxes. Unlike a checkbox group, a radio button group would almost always have an associated 'question'.</p>
+
+				<fieldset class="form__fieldset">
+					
+					<legend class="form__legend">Form Legend</legend>
+					
+					<input id="radio1" type="radio" name="radio-element" value="radio-element-1" class="form__radio">
+					<label for="radio1" class="form__radio-label">Radio 1</label><br>
+					
+					<input id="radio2" type="radio" name="radio-element" value="radio-element-2" class="form__radio">	
+					<label for="radio2" class="form__radio-label">Radio 2</label><br>
+					
+					<input id="radio3" type="radio" name="radio-element" value="radio-element-3" class="form__radio">
+					<label for="radio3" class="form__radio-label">Radio 3</label>
+
+				</fieldset>
+				
+			</div>
+
+			<div>
+				<button class="btn btn--icon-and-text js-source-trigger u-t-small u-t-primary">
+					<span class="btn__icon">
+						<include href="/frontend/assets/svg/parts/svg-layout.html" with="content='code.svg', className='u-fill-primary' " />
+					</span>
+					<span class="btn__text">Source</span>
+				</button>
+				<div class="u-hide js-source">
+					<script type="text/plain" class="language-markup"><div class="form__group"><fieldset class="form__fieldset"><legend class="form__legend">Form Legend</legend><input id="radio1" type="radio" name="radio-element" value="radio-element-1" class="form__radio"><label for="radio1" class="form__radio-label">Radio 1</label><br><input id="radio2" type="radio" name="radio-element" value="radio-element-2" class="form__radio"><label for="radio2" class="form__radio-label">Radio 2</label><br><input id="radio3" type="radio" name="radio-element" value="radio-element-3" class="form__radio"><label for="radio3" class="form__radio-label">Radio 3</label></fieldset></div></script>
+				</div>
+			</div>
+
+		</form>
+		
+	</div>
+
+</div>
+
