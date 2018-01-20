@@ -1,0 +1,17 @@
+- name: Form elements
+  link: components/form-elements
+
+- name: Progress
+  link: components/progress
+
+- name: Loader
+  link: components/loader
+
+- name: Labels
+  link: components/labels
+
+- name: Facepile
+  link: components/facepile
+
+- name: Tabs
+  link: components/facepile

@@ -21,31 +21,10 @@
 		</a>
 		
 		<nav class="pl-sidebar-sub-nav">
-		
-			<a href="#section-brand" class="pl-sidebar-sub-nav__link js-style-guide-link">
-				Brand
-			</a>
 
-			<a href="#section-colour-scheme" class="pl-sidebar-sub-nav__link js-style-guide-link">
-				Colour Scheme
-			</a>
-	
-			<a href="#section-grid-system" class="pl-sidebar-sub-nav__link js-style-guide-link">
-				Grid system
-			</a>
-
-			<a href="#section-typography" class="pl-sidebar-sub-nav__link  pl-sidebar-sub-nav__link--active js-style-guide-link">
-				Typography
-			</a>
-			
-			<a href="#section-body-copy" class="pl-sidebar-sub-nav__link js-style-guide-link">
-				Body copy
-			</a>
-
-			<a href="#section-icons" class="pl-sidebar-sub-nav__link js-style-guide-link">
-				Icons
-			</a>
-
+			{% for menuItems in site.data.elements-nav %}
+				<a href="{{site.url}}/{{ menuItems.link }}" class="pl-sidebar-sub-nav__link js-style-guide-link">{{ menuItems.name }}</a>
+			{% endfor %}
 
 		</nav>
 
@@ -62,34 +41,9 @@
 		
 		<nav class="pl-sidebar-sub-nav">
 			
-			<a href="#section-form-elements" class="pl-sidebar-sub-nav__link js-style-guide-link">
-				Form elements
-			</a>
-			
-			<a href="#section-progress" class="pl-sidebar-sub-nav__link js-style-guide-link">
-				Progress 
-			</a>
-						
-			<a href="#section-loader" class="pl-sidebar-sub-nav__link  pl-sidebar-sub-nav__link--active js-style-guide-link">
-				Loader
-			</a>
-			
-			<a href="#section-labels" class="pl-sidebar-sub-nav__link  pl-sidebar-sub-nav__link--active js-style-guide-link">
-				Labels
-			</a>
-		
-			<a href="#section-facepile" class="pl-sidebar-sub-nav__link  pl-sidebar-sub-nav__link--active js-style-guide-link">
-				Facepile
-			</a>
-		
-			<a href="#section-table" class="pl-sidebar-sub-nav__link  pl-sidebar-sub-nav__link--active js-style-guide-link">
-				Table
-			</a>
-		
-			<a href="#section-tabs" class="pl-sidebar-sub-nav__link  pl-sidebar-sub-nav__link--active js-style-guide-link">
-				Tabs
-			</a>
-		
+			{% for menuItems in site.data.components-nav %}
+				<a href="{{site.url}}/{{ menuItems.link }}" class="pl-sidebar-sub-nav__link js-style-guide-link">{{ menuItems.name }}</a>
+			{% endfor %}
 
 		</nav>
 
@@ -105,14 +59,9 @@
 		
 		<nav class="pl-sidebar-sub-nav">
 			
-			<a href="#section-buttons" class="pl-sidebar-sub-nav__link  pl-sidebar-sub-nav__link--active js-style-guide-link">
-				Buttons
-			</a>
-			
-			<a href="#section-labels" class="pl-sidebar-sub-nav__link js-style-guide-link">
-				Labels
-			</a>
-
+			{% for menuItems in site.data.utilities-nav %}
+				<a href="{{site.url}}/{{ menuItems.link }}" class="pl-sidebar-sub-nav__link js-style-guide-link">{{ menuItems.name }}</a>
+			{% endfor %}
 		</nav>
 
 	</nav>
