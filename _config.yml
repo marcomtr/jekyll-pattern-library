@@ -27,7 +27,6 @@ markdown: kramdown
 
 # Sass settings
 sass:
-  add_charset: true
   style: compressed
 
 # Build settings
@@ -36,4 +35,3 @@ exclude:
   - README.md
   - CNAME
   - assets/sass
-
