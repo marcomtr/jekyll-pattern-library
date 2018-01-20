@@ -11,7 +11,6 @@ var patternLibrary = {
 	init: function() {
 		patternLibraryClasses = this.classes;
 		this.bindUIActions();
-
 	},
 
 
