@@ -30,12 +30,4 @@ sass:
   style: compressed
 
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
-
-# Build settings
-exclude:
-  - package.json
-  - README.md
-  - CNAME
-  - assets/sass
