@@ -29,6 +29,10 @@ markdown: kramdown
 sass:
   style: compressed
 
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
 # Build settings
 exclude:
   - package.json
