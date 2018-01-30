@@ -1,16 +1,27 @@
 <aside class="pl-sidebar">
 
-	<a href="{{site.url}}" class="pl-logo">
-		<img src="{{site.url}}/assets/images/pl-logo@1x.png" srcset="assets/images/pl-logo@2x.png 2x" class="pl-logo__img" alt="Placeholder Logo">
-	</a>
+
+	<div class="pl-header">
+		<a href="{{site.url}}" class="pl-header__logo">
+			<img src="{{site.url}}/assets/images/pl-logo@1x.png" srcset="assets/images/pl-logo@2x.png 2x" class="pl-logo__img" alt="Placeholder Logo">
+		</a>
+		<button class="pl-menu-toggle js-nav-toggle">
+			<span class="pl-menu-toggle__text">Menu</span>
+			<span class="pl-menu-toggle__icon">
+				{% include icons/menu.svg %}
+			</span>
+		</button>
+	</div>
 	
 	<div class="pl-title">
 		Pattern Library
 	</div>
 
+
+
 	<nav class="pl-sidebar-nav js-style-guide-nav">
 		
-		<a href="#" class="pl-sidebar-nav__link" >
+		<a href="#" class="pl-sidebar-nav__link js-nav-heading" >
 			<span>Elements</span>
 			<span>
 				<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="pl-sidebar-nav__icon">
@@ -20,16 +31,16 @@
 			</span>
 		</a>
 		
-		<nav class="pl-sidebar-sub-nav">
+		<nav class="pl-sidebar-sub-nav js-style-guide-sub-nav">
 
 			{% for menuItems in site.data.elements-nav %}
-				<a href="{{site.url}}/{{ menuItems.link }}" class="pl-sidebar-sub-nav__link js-style-guide-link">{{ menuItems.name }}</a>
+				<a href="{{site.url}}/{{ menuItems.link }}" class="pl-sidebar-sub-nav__link {% if menuItems.link == page.permalink %}active{% endif %}">{{ menuItems.name }}</a>
 			{% endfor %}
 
 		</nav>
 
 
-		<a href="#" class="pl-sidebar-nav__link">
+		<a href="#" class="pl-sidebar-nav__link js-nav-heading">
 			<span>Components</span>
 			<span>
 				<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="pl-sidebar-nav__icon">
@@ -39,7 +50,7 @@
 			</span>
 		</a>
 		
-		<nav class="pl-sidebar-sub-nav">
+		<nav class="pl-sidebar-sub-nav js-style-guide-sub-nav">
 			
 			{% for menuItems in site.data.components-nav %}
 				<a href="{{site.url}}/{{ menuItems.link }}" class="pl-sidebar-sub-nav__link js-style-guide-link">{{ menuItems.name }}</a>
@@ -47,7 +58,7 @@
 
 		</nav>
 
-		<a href="#" class="pl-sidebar-nav__link">
+		<a href="#" class="pl-sidebar-nav__link js-nav-heading">
 			<span>Utilities</span>
 			<span>
 				<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="pl-sidebar-nav__icon">
@@ -57,7 +68,7 @@
 			</span>
 		</a>
 		
-		<nav class="pl-sidebar-sub-nav">
+		<nav class="pl-sidebar-sub-nav js-style-guide-sub-nav">
 			
 			{% for menuItems in site.data.utilities-nav %}
 				<a href="{{site.url}}/{{ menuItems.link }}" class="pl-sidebar-sub-nav__link js-style-guide-link">{{ menuItems.name }}</a>

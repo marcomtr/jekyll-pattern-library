@@ -1,11 +1,12 @@
 var patternLibrary = {
 
 	classes: {
-		section: ".js-section",
 		nav: ".js-style-guide-nav",
-		sourceTrigger: ".js-source-trigger",
-		sourceContainer: ".js-source",
-		menuLink: ".pl-sidebar-nav__link"
+		navToggle: ".js-nav-toggle",
+		navHeading: ".js-nav-heading",
+		subNav: ".js-style-guide-sub-nav",
+		sourceCodeTrigger: ".js-source-trigger",
+		sourceCodeContainer: ".js-source",
 	},
 
 	init: function() {
@@ -16,16 +17,33 @@ var patternLibrary = {
 
 	bindUIActions: function() {
 
-		$(patternLibraryClasses.menuLink).on('click', function(e) {
+		// show and hide navigation on small screens
+		$(patternLibraryClasses.navToggle).on('click', function() {
+			$(patternLibraryClasses.nav).toggleClass('pl-sidebar-nav--is-visible');
+		});
+
+		// collapse and expand navigation areas
+		$(patternLibraryClasses.navHeading).on('click', function(e) {
+
 			e.preventDefault();
-			$(this).next('.pl-sidebar-sub-nav').toggleClass('pl-sidebar-sub-nav--is-active');
+			
+			if ( $(this).next(patternLibraryClasses.subNav).hasClass('pl-sidebar-sub-nav--is-active') ) {
+				$(this).next(patternLibraryClasses.subNav).removeClass('pl-sidebar-sub-nav--is-active');
+			}
+			
+			else {
+				$(patternLibraryClasses.subNav).removeClass('pl-sidebar-sub-nav--is-active');
+				$(this).next(patternLibraryClasses.subNav).addClass('pl-sidebar-sub-nav--is-active');
+			}
 			
 		});
 
-		$(patternLibraryClasses.sourceTrigger).on('click', function(e) {
+		// source code
+		$(patternLibraryClasses.sourceCodeTrigger).on('click', function(e) {
 			e.preventDefault();
-			$(this).parent().find(patternLibraryClasses.sourceContainer).toggleClass('u-hide');
+			$(this).parent().find(patternLibraryClasses.sourceCodeContainer).toggleClass('u-hide');
 		});
+
 
 	}
 };
